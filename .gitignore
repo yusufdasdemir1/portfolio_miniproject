@@ -1,0 +1,17 @@
+# Environment & credentials
+.env
+
+# Docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# PHP cache
+*.log

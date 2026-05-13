@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusuf Daşdemir | Portfolio</title>
+    <meta name="description" content="Full Stack Developer specializing in web technologies">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">Yusuf Daşdemir</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+
+            <div class="hero-top">
+                <span class="hero-label">Backend Engineer</span>
+                <span class="hero-available"><span class="badge-dot"></span>Open to work</span>
+            </div>
+
+            <h1 class="hero-name">Yusuf Daşdemir</h1>
+
+            <div class="hero-divider">
+                <span class="divider-line"></span>
+                <span class="divider-icon"><i class="fas fa-terminal"></i></span>
+                <span class="divider-line"></span>
+            </div>
+
+            <p class="hero-desc">
+                Building scalable backend systems, data pipelines<br>
+                and automation at <span class="desc-accent">Pure Technology</span>.
+            </p>
+
+            <div class="hero-stack">
+                <span class="stack-item">Python</span>
+                <span class="stack-sep">·</span>
+                <span class="stack-item">Django</span>
+                <span class="stack-sep">·</span>
+                <span class="stack-item">Data Analysis</span>
+                <span class="stack-sep">·</span>
+                <span class="stack-item">Docker</span>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+            </div>
+
+            <div class="hero-socials">
+                <a href="https://github.com/yusufdasdemir1" class="social-link" aria-label="GitHub" target="_blank"
+                    rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yusuf-da%C5%9Fdemir?trk=people-guest_people_search-card&originalSubdomain=tr"
+                    class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">About Me</span>
+                <p class="section-subtitle">A passionate developer with a love for building beautiful, functional web
+                    experiences.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal">
+                    <div class="about-image-frame">
+                        <div class="about-avatar">
+                            <img src="assets/images/me.jpeg" alt="Yusuf Daşdemir" class="avatar-photo" id="aboutPhoto">
+                            <div class="avatar-ring ring-1"></div>
+                            <div class="avatar-ring ring-2"></div>
+                            <div class="avatar-ring ring-3"></div>
+                        </div>
+                    </div>
+                    <div class="about-float-card">
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <strong>3+</strong>
+                            <span>Years Coding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal">
+                    <h3 class="about-heading" id="aboutHeading">Building scalable systems with data-driven solutions.
+                    </h3>
+                    <div id="aboutBios">
+                        <p class="about-text">I'm a third-year Software Engineering student at Haliç University and a
+                            backend-focused developer based in Turkey. Since February 2024, I have been working at Pure
+                            Technology, where I contribute to backend development, data science, web scraping, and
+                            large-scale automation projects.</p>
+                        <p class="about-text">My experience includes developing scalable backend services with Django,
+                            building workflow automation systems using Temporal, and working with data processing
+                            technologies such as pandas, NumPy, and SQL.</p>
+                        <p class="about-text">My journey in software development started with curiosity and quickly
+                            evolved into a passion for solving real-world engineering problems.</p>
+                    </div>
+                </div>
+                <div class="about-stats" id="aboutStats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="6">6</span>+
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="3">3</span>+
+                        <span class="stat-label">Years Exp.</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="5">5</span>+
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">My Expertise</span>
+                <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+                <p class="section-subtitle">Technologies I work with to bring ideas to life.</p>
+            </div>
+            <div class="skills-grid" id="skillsGrid">
+
+                <!-- Frontend -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-palette"></i></div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-html5"></i> HTML5</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-js"></i> JavaScript</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fas fa-code"></i> TypeScript</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-python"></i> Python</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-java"></i> Java</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fas fa-database"></i> MySQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fas fa-exchange-alt"></i> REST API</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-infinity"></i></div>
+                        <h3>DevOps</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-docker"></i> Docker</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fab fa-linux"></i> Linux</span>
+                                <span>72%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="72"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fas fa-code-branch"></i> CI / CD</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span><i class="fas fa-network-wired"></i> Nginx</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" data-width="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-wrench"></i></div>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="tool-cards">
+                        <div class="tool-card">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fab fa-bitbucket"></i>
+                            <span>Bitbucket</span>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fab fa-jira"></i>
+                            <span>Jira</span>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fas fa-terminal"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fas fa-vial"></i>
+                            <span>Postman</span>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fas fa-database"></i>
+                            <span>DataGrip</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <p class="section-subtitle">A selection of projects I've built and shipped.</p>
+            </div>
+            <div class="projects-filter reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <div class="projects-loading">
+                    <div class="spinner"></div>
+                    <p>Loading projects...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's <span class="highlight">Connect</span></h2>
+                <p class="section-subtitle">Have a project in mind? Let's build something great together.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Ready to start a project?</h3>
+                    <p>I'm currently available for freelance work and open to new opportunities. Feel free to reach out!
+                    </p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <strong>Email</strong>
+                                <span>yusufdasdemircs@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <strong>Location</strong>
+                                <span>Turkey</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <strong>Availability</strong>
+                                <span>Mon – Fri, 9AM – 6PM (GMT+3)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo footer-logo">
+                        <span class="logo-text">Yusuf Daşdemir</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/yusufdasdemir1" aria-label="GitHub" target="_blank" rel="noopener"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yusuf-da%C5%9Fdemir?trk=people-guest_people_search-card&originalSubdomain=tr"
+                        aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yusuf Daşdemir. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon" id="toastIcon"></div>
+        <div class="toast-content">
+            <strong id="toastTitle"></strong>
+            <span id="toastMessage"></span>
+        </div>
+        <button class="toast-close" id="toastClose"><i class="fas fa-times"></i></button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
