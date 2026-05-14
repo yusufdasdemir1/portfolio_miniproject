@@ -5,10 +5,10 @@ services:
     container_name: portfolio_mysql
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass
-      MYSQL_DATABASE: portfolio_db
-      MYSQL_USER: portfolio_user
-      MYSQL_PASSWORD: portfolio_pass
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
     ports:
       - "3307:3306"
     volumes:
@@ -17,7 +17,7 @@ services:
     networks:
       - portfolio_net
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpass"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -32,11 +32,11 @@ services:
     volumes:
       - .:/var/www/html
     environment:
-      DB_HOST: mysql
-      DB_PORT: 3306
-      DB_NAME: portfolio_db
-      DB_USER: root
-      DB_PASS: rootpass
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
     networks:
       - portfolio_net
     depends_on:

@@ -1,0 +1,29 @@
+FROM php:8.2-apache
+
+# Extensions
+RUN docker-php-ext-install pdo pdo_mysql opcache
+
+# Apache modules
+RUN a2enmod rewrite headers
+
+# PHP config files
+COPY docker/php/opcache.ini  /usr/local/etc/php/conf.d/opcache.ini
+COPY docker/php/security.ini /usr/local/etc/php/conf.d/security.ini
+
+# Apache config
+COPY docker/apache/portfolio.conf /etc/apache2/sites-available/000-default.conf
+
+# Copy uygulama kodu
+COPY . /var/www/html/
+
+# İzinler
+RUN chown -R www-data:www-data /var/www/html \
+    && find /var/www/html -type d -exec chmod 755 {} \; \
+    && find /var/www/html -type f -exec chmod 644 {} \; \
+    && chmod -R 777 /var/www/html/assets/images \
+    && rm -f /var/www/html/admin/setup.php \
+    && rm -f /var/www/html/.env
+
+WORKDIR /var/www/html
+
+CMD ["apache2-foreground"]

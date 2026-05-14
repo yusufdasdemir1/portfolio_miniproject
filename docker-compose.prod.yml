@@ -1,0 +1,21 @@
+services:
+
+  mysql:
+    ports: []                    # MySQL dışarıya kapalı
+    restart: always
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "80:80"
+    volumes: []                  # Bind mount yok, kod image içinde
+    restart: always
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      APP_ENV: production

@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS projects (
     category     ENUM('frontend','backend','fullstack')          NOT NULL DEFAULT 'fullstack',
     github_url   VARCHAR(500)                                    DEFAULT NULL,
     live_url     VARCHAR(500)                                    DEFAULT NULL,
+    image_path   VARCHAR(500)                                    DEFAULT NULL,
     featured     TINYINT(1)                                      NOT NULL DEFAULT 0,
     created_at   TIMESTAMP                                       NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
