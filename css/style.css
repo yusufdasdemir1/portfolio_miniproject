@@ -283,7 +283,7 @@ body {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    object-position: 60% 15%;
+    object-position: 90% 100%;
     display: block;
 }
 
