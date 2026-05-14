@@ -46,7 +46,7 @@
 
 .hero-avatar-img {
     width: 100%; height: 100%; border-radius: 50%;
-    object-fit: cover; object-position: 60% 15%; display: block;
+    object-fit: cover; object-position: 60% 80%; display: block;
 }
 
 /* Top row */
