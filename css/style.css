@@ -1030,7 +1030,7 @@ section:not(.hero) { padding: 120px 0; }
     .nav-link { padding: 11px 18px; width: 100%; border-radius: var(--radius-sm); }
     .hamburger { display: flex; }
 
-    .hero-name { font-size: 2.6rem; }
+    .hero-name { font-size: 2.2rem; }
     .hero-actions { flex-direction: column; align-items: center; }
     .skills-grid { grid-template-columns: 1fr; }
     .tool-cards  { grid-template-columns: repeat(4, 1fr); }
