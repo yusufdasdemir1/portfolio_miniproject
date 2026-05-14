@@ -1,0 +1,127 @@
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+}
+
+.hero-bg { position: absolute; inset: 0; }
+.grid-overlay { display: none; }
+
+.hero-content {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 60px; width: 100%; max-width: 1100px;
+    padding: var(--nav-h) 48px 0;
+}
+
+/* Left column */
+.hero-left {
+    display: flex; flex-direction: column;
+    align-items: flex-start; text-align: left;
+    gap: 28px; flex: 1;
+}
+
+/* Right: circular photo */
+.hero-photo-wrap {
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.hero-photo-ring {
+    width: 320px; height: 320px;
+    border-radius: 50%; padding: 4px;
+    background: linear-gradient(135deg, #5DF8D8, #3B7597, #093C5D);
+    box-shadow: 0 0 40px rgba(93,248,216,0.2), 0 20px 60px rgba(4,10,20,0.5);
+    position: relative;
+}
+
+.hero-photo-ring::before {
+    content: ''; position: absolute; inset: -6px;
+    border-radius: 50%; border: 1px solid rgba(93,248,216,0.15);
+    animation: ringPulse 3s ease-in-out infinite;
+}
+
+.hero-avatar-img {
+    width: 100%; height: 100%; border-radius: 50%;
+    object-fit: cover; object-position: 60% 15%; display: block;
+}
+
+/* Top row */
+.hero-top {
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+}
+
+.hero-label {
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase; color: #5DF8D8;
+}
+[data-theme="light"] .hero-label { color: #3B7597; }
+
+.hero-available {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 0.7rem; font-weight: 500; color: var(--text-2); letter-spacing: 0.05em;
+}
+
+.badge-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #5DF8D8; flex-shrink: 0;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+[data-theme="light"] .badge-dot { background: #3B7597; }
+
+/* Name */
+.hero-name {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 800; letter-spacing: -0.025em;
+    line-height: 1.1; color: var(--text); margin: -4px 0;
+}
+[data-theme="light"] .hero-name { color: #061525; }
+
+/* Divider */
+.hero-divider { display: flex; align-items: center; gap: 14px; width: 100%; max-width: 300px; }
+
+.divider-line {
+    flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(93,248,216,0.3));
+}
+.divider-line:last-child { background: linear-gradient(90deg, rgba(93,248,216,0.3), transparent); }
+[data-theme="light"] .divider-line { background: linear-gradient(90deg, transparent, rgba(9,60,93,0.15)); }
+[data-theme="light"] .divider-line:last-child { background: linear-gradient(90deg, rgba(9,60,93,0.15), transparent); }
+
+.divider-icon { font-size: 0.7rem; color: #5DF8D8; opacity: 0.6; flex-shrink: 0; }
+[data-theme="light"] .divider-icon { color: #3B7597; }
+
+/* Description */
+.hero-desc { font-size: 0.97rem; color: var(--text-2); line-height: 1.8; margin: -4px 0; }
+
+.desc-accent { color: #5DF8D8; font-weight: 600; }
+[data-theme="light"] .desc-accent { color: #093C5D; font-weight: 700; }
+
+/* Stack */
+.hero-stack {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    font-family: var(--font-mono); font-size: 0.75rem;
+}
+.stack-item { color: var(--text-2); font-weight: 500; }
+.stack-sep  { color: rgba(93,248,216,0.4); }
+[data-theme="light"] .stack-sep { color: rgba(9,60,93,0.3); }
+
+/* Actions */
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Socials */
+.hero-socials { display: flex; gap: 8px; }
+
+.social-link {
+    width: 38px; height: 38px; border-radius: var(--radius-sm);
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(9,60,93,0.12); color: var(--text-2);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 0.82rem; transition: all var(--transition);
+}
+[data-theme="light"] .social-link { background: rgba(9,60,93,0.04); border-color: rgba(9,60,93,0.1); }
+.social-link:hover { border-color: rgba(93,248,216,0.4); color: #5DF8D8; transform: translateY(-2px); }
+[data-theme="light"] .social-link:hover { border-color: rgba(9,60,93,0.3); color: #093C5D; }

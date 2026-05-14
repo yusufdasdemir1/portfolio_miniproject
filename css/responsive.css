@@ -1,0 +1,61 @@
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 1024px) {
+    .about-grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+    .about-image-wrapper { justify-content: center; }
+    .about-stats { justify-content: center; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 768px) {
+    section:not(.hero) { padding: 80px 0; }
+
+    .nav-links {
+        position: fixed; top: var(--nav-h); left: 0; right: 0;
+        background: var(--nav-bg); backdrop-filter: blur(20px);
+        flex-direction: column; padding: 20px;
+        gap: 4px; transform: translateY(-16px); opacity: 0;
+        pointer-events: none; transition: all var(--transition);
+        border-bottom: 1px solid var(--border);
+    }
+    .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: all; }
+    .nav-link { padding: 11px 18px; width: 100%; border-radius: var(--radius-sm); }
+    .hamburger { display: flex; }
+
+    .hero-content { flex-direction: column; padding: calc(var(--nav-h) + 32px) 24px 40px; gap: 40px; }
+    .hero-left { align-items: center; text-align: center; }
+    .hero-divider { max-width: 300px; }
+    .hero-photo-ring { width: 220px; height: 220px; }
+    .hero-name { font-size: 2.2rem; }
+    .hero-actions { flex-direction: row; justify-content: center; }
+    .hero-top { justify-content: center; }
+    .hero-stack { justify-content: center; }
+    .hero-socials { justify-content: center; }
+
+    .skills-grid { grid-template-columns: 1fr; }
+    .tool-cards  { grid-template-columns: repeat(4, 1fr); }
+    .projects-grid { grid-template-columns: 1fr; }
+    .contact-form-wrapper { padding: 24px 18px; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-content { flex-direction: column; gap: 28px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .about-image-frame { width: 220px; height: 220px; }
+    .ring-1 { width: 265px; height: 265px; }
+    .ring-2 { width: 320px; height: 320px; }
+    .ring-3 { display: none; }
+    .about-float-card { right: 0; bottom: -10px; }
+    .section-header { margin-bottom: 48px; }
+    .toast { left: 14px; right: 14px; bottom: 14px; min-width: unset; }
+}
+
+@media (max-width: 480px) {
+    .hero-name { font-size: 2rem; }
+    .about-stats { flex-direction: column; align-items: center; }
+    .stat-card { width: 100%; max-width: 190px; }
+    .tool-cards { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .tool-card i { font-size: 1.2rem; }
+    .tool-card span { font-size: 0.6rem; }
+}

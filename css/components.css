@@ -1,0 +1,87 @@
+/* =============================================
+   COMPONENTS — Buttons, Toast, Reveal, Animations
+   ============================================= */
+
+/* --- Buttons --- */
+.btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 28px; border-radius: var(--radius-sm);
+    font-weight: 600; font-size: 0.9rem; text-decoration: none;
+    cursor: pointer; border: none; transition: all var(--transition);
+    white-space: nowrap; letter-spacing: 0.02em;
+}
+
+.btn-primary {
+    background: #5DF8D8; color: #04101c;
+    box-shadow: 0 8px 24px rgba(93, 248, 216, 0.3); font-weight: 700;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(93, 248, 216, 0.45);
+    background: #6FD1D7;
+}
+
+.btn-outline {
+    background: transparent; color: var(--text);
+    border: 1.5px solid rgba(93, 248, 216, 0.25);
+}
+[data-theme="light"] .btn-outline { border-color: rgba(9, 60, 93, 0.25); }
+.btn-outline:hover { border-color: #5DF8D8; color: #5DF8D8; transform: translateY(-2px); }
+[data-theme="light"] .btn-outline:hover { color: #093C5D; border-color: #093C5D; }
+
+.btn-full { width: 100%; justify-content: center; }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none !important; }
+
+/* --- Reveal --- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* --- Toast --- */
+.toast {
+    position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 18px; border-radius: var(--radius);
+    background: var(--bg-card); border: 1px solid var(--border-card);
+    box-shadow: var(--shadow); min-width: 290px; max-width: 400px;
+    transform: translateX(calc(100% + 40px)); opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+    backdrop-filter: blur(16px);
+}
+[data-theme="dark"] .toast { background: rgba(7,24,42,0.95); border-color: rgba(93,248,216,0.1); }
+.toast.show { transform: translateX(0); opacity: 1; }
+
+.toast-icon { width: 36px; height: 36px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
+.toast-icon.success { background: rgba(93,248,216,0.1); color: #5DF8D8; }
+.toast-icon.error   { background: rgba(255,92,122,0.1); color: #ff5c7a; }
+
+.toast-content { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.toast-content strong { font-size: 0.87rem; }
+.toast-content span   { font-size: 0.78rem; color: var(--text-2); }
+
+.toast-close { background: none; border: none; color: var(--text-3); cursor: pointer; font-size: 0.78rem; padding: 4px; transition: color var(--transition); flex-shrink: 0; }
+.toast-close:hover { color: var(--text); }
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(93,248,216,0.5); }
+    50%       { box-shadow: 0 0 0 6px rgba(93,248,216,0); }
+}
+
+@keyframes ringPulse {
+    0%, 100% { opacity: 0.5; transform: translate(-50%,-50%) scale(1); }
+    50%       { opacity: 1;   transform: translate(-50%,-50%) scale(1.02); }
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@keyframes spinWheel { to { transform: rotate(360deg); } }
+
+@keyframes scrollDown {
+    0%   { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(13px); opacity: 0; }
+}

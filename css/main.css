@@ -1,0 +1,15 @@
+/* =============================================
+   MAIN — Ocean Depth Portfolio
+   Palette: #5DF8D8 · #6FD1D7 · #3B7597 · #093C5D
+   ============================================= */
+
+@import url('base.css');
+@import url('components.css');
+@import url('navbar.css');
+@import url('hero.css');
+@import url('about.css');
+@import url('skills.css');
+@import url('projects.css');
+@import url('contact.css');
+@import url('footer.css');
+@import url('responsive.css');
